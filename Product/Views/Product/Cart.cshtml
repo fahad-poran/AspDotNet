@@ -1,0 +1,24 @@
+﻿@model List<Product.Models.Entity.ProductStructure>
+@{
+    ViewBag.Title = "Cart";
+}
+
+<h2>Cart</h2>
+<table class=" = table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Description</th>
+    </tr>
+    @foreach (var s in Model)
+    {
+        <tr>
+            <td>@s.Id</td>
+            <td>@s.Name</td>
+            <td>@s.Price</td>
+            <td>@s.Quantity</td>
+            <td>@s.Description</td>
+        </tr>}
+</table>
